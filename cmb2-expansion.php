@@ -15,7 +15,7 @@ define( 'CMB2_EXP_BASE', plugin_basename( __FILE__ ) );
 define( 'CMB2_EXP_VERSION', '1.0' );
 
 // check if CMB2 class is defined (possibly use the PRE ACTIVATION hook)
-function cmb2_exp_espansion_plugin_init() {
+function cmb2_exp_expansion_plugin_init() {
   //check if CMB2 is loaded
   if( defined( 'CMB2_LOADED' ) ) {
 
@@ -44,6 +44,6 @@ function cmb2_exp_espansion_plugin_init() {
   }
   //IF CMB2 NOT LOADED, SHOW ALERT
 }
-add_action( 'plugins_loaded', 'cmb2_exp_espansion_plugin_init' );
+add_action( 'plugins_loaded', 'cmb2_exp_expansion_plugin_init' );
 
 ?>
