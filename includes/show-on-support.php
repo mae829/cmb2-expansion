@@ -71,4 +71,12 @@
 		}
 	}
 
-?>
+	// for excluding CMB2s from post-new
+	function cmb2_exclude_from_new( $display, $meta_box ) {
+		if ( !isset($_GET['post']) ) {
+			return;
+		}
+
+		return $display;
+	}
+	add_filter( 'cmb2_show_on', 'cmb2_exclude_from_new', 10, 2 );
