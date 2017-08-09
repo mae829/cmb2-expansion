@@ -34,7 +34,7 @@
 					<?php
 					//check if repeat array for groups exists
 					if ( !empty( $repeatGroups ) ):
-						foreach ($repeatGroups as $k => $v) {
+						foreach ( $repeatGroups as $k => $v ) {
 							echo "repeatGroups.push(['{$v['id']}',{$v['limit']}]);\n";
 						}
 					?>
@@ -49,7 +49,7 @@
 
 					//check if repeat array for fields exists
 					if ( !empty( $repeatFields ) ):
-						foreach ($repeatFields as $k => $v) {
+						foreach ( $repeatFields as $k => $v ) {
 							echo "repeatFields.push(['{$v['id']}',{$v['limit']}]);\n";
 						}
 					?>
@@ -88,8 +88,8 @@
 				enableAdder  = function() { fieldTable.find('.cmb-add-group-row.button').prop( 'disabled', false ); };
 			} else if ( type == 'field' ) {
 				countRows    = function() { return fieldTable.find( '.cmb-row.cmb-repeat-row' ).length; };
-				disableAdder = function() { fieldTable.parents( '.cmb-repeat.table-layout' ).find('.cmb-add-row-button.button').prop( 'disabled', true ); };
-				enableAdder  = function() { fieldTable.parents( '.cmb-repeat.table-layout' ).find('.cmb-add-row-button.button').prop( 'disabled', false ); };
+				disableAdder = function() { fieldTable.parents( '.cmb-row.cmb-repeat' ).find('.cmb-add-row-button.button').prop( 'disabled', true ); };
+				enableAdder  = function() { fieldTable.parents( '.cmb-row.cmb-repeat' ).find('.cmb-add-row-button.button').prop( 'disabled', false ); };
 			}
 
 			if ( countRows() >= limit ) { disableAdder(); }
