@@ -2,14 +2,10 @@
   min-height: 0;
 }
 #cmb2-nav .nav-tab{
-  font-size: 12px;
-  line-height: 16px;
-  padding: 4px 14px 6px;
-  margin: -4px 4px -1px 0;
+  margin-bottom: -1px;
 }
 /* wrapper for tabs */
 .nav-tab-wrapper{
-  margin: 20px 0 0;
   border-bottom: 1px solid #ccc;
 }
   /* tabs */
@@ -34,7 +30,7 @@
   }
 
   /* no margin on right so tabs turn into accordion view at proper window width */
-  .nav-tab-wrapper a:not(.hidden):last-child{
+  #cmb2-nav .nav-tab-wrapper a:not(.hidden):last-child{
     margin-right: 0;
   }
 .cmb2-exp-hidden{
