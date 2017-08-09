@@ -1,6 +1,12 @@
 #post-body #normal-sortables{
   min-height: 0;
 }
+#cmb2-nav .nav-tab{
+  font-size: 12px;
+  line-height: 16px;
+  padding: 4px 14px 6px;
+  margin: -4px 4px -1px 0;
+}
 /* wrapper for tabs */
 .nav-tab-wrapper{
   margin: 20px 0 0;
