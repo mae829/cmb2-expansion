@@ -1,0 +1,45 @@
+#post-body #normal-sortables{
+  min-height: 0;
+}
+/* wrapper for tabs */
+.nav-tab-wrapper{
+  margin: 20px 0 0;
+  border-bottom: 1px solid #ccc;
+}
+  /* tabs */
+  .nav-tab-wrapper .nav-tab{
+    border-bottom: 1px solid #ccc;
+    font-weight: bold;
+    z-index: 1;
+  }
+  .nav-tab-wrapper .nav-tab.hidden{
+    display: none;
+  }
+  /* selected tab */
+  .nav-tab-wrapper .nav-tab.nav-tab-active{
+    border-bottom: 1px solid #f1f1f1; /* color of WP admin background */
+    z-index: 9999;
+  }
+  /* override WP focus and active stylings */
+  .nav-tab-wrapper .nav-tab:active,
+  .nav-tab-wrapper .nav-tab:focus{
+    color: #464646;
+    box-shadow: none;
+  }
+
+  /* no margin on right so tabs turn into accordion view at proper window width */
+  .nav-tab-wrapper a:not(.hidden):last-child{
+    margin-right: 0;
+  }
+.cmb2-exp-hidden{
+  display: none !important;
+}
+/* switch to accordion type of view if tabs nav splits into two rows */
+.alt-tabs-display{
+  display: none;
+}
+.alt-meta-display{
+  display: block !important;
+  visibility: visible !important;
+  margin-bottom: 0;
+}
