@@ -20,13 +20,23 @@ function cmb2_expansion_plugin_init() {
 	//check if CMB2 is loaded
 	if ( defined( 'CMB2_LOADED' ) ) {
 
-		// include class file
-		if ( file_exists( CMB2_EXP_DIR . '/includes/class-cmb2-expansion.php' ) ){
+		// include class files
+		if ( file_exists( CMB2_EXP_DIR .'/includes/cmb2-expansions.php' ) ){
+			require_once CMB2_EXP_DIR .'/includes/cmb2-expansions.php';
 
-			require_once CMB2_EXP_DIR . '/includes/class-cmb2-expansion.php';
+			CMB2_Expansions::singleton();
+		}
 
-			CMB2_Expansion::singleton();
+		if ( file_exists( CMB2_EXP_DIR .'/includes/cmb2-tabs.php' ) ){
+			require_once CMB2_EXP_DIR .'/includes/cmb2-tabs.php';
 
+			CMB2_Tabs::singleton();
+		}
+
+		if ( file_exists( CMB2_EXP_DIR .'/includes/cmb2-repeat-limit.php' ) ){
+			require_once CMB2_EXP_DIR .'/includes/cmb2-repeat-limit.php';
+
+			CMB2_Repeat_Limit::singleton();
 		}
 
 	} else {
