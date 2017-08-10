@@ -18,6 +18,16 @@ CMB2 EXPANSION is a plugin which adds features to the plugin [CMB2](https://gith
 1. Place the CMB2 EXPANSION directory inside of your plugins directory (typically /wp-content/plugins).
 2. Activate plugin through the Plugins Admin page
 
+## Changelog
+
+## 1.3 - 03-10-2017
+### Enhancements
+* Added opt-out options to features via the user profile panel
+
+### Misc
+* Compressed JS and CSS files via Prepros
+* Split files for better organization
+
 ### 1.2 - 06-15-2016
 #### Enhancements
 * Use OOP for all features

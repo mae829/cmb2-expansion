@@ -1,7 +1,15 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-### Bug Fixes
+## 1.3 - 03-10-2017
+
+### Enhancements
+* Added opt-out options to features via the user profile panel
+
+### Misc
+* Compressed JS and CSS files via Prepros
+* Split files for better organization
+
 ## 1.2 - 06-15-2016
 
 ### Enhancements
