@@ -105,8 +105,11 @@
 
 		$slug = get_post( $post_id )->post_name;
 
+		// If value isn't an array, turn it into one
+		$meta_box['show_on']['value'] = !is_array( $meta_box['show_on']['value'] ) ? array( $meta_box['show_on']['value'] ) : $meta_box['show_on']['value'];
+
 		// See if there's a match
-		return in_array( $slug, (array) $meta_box['show_on']['value'] );
+		return !in_array( $slug, (array) $meta_box['show_on']['value'] );
 
 	}
 
