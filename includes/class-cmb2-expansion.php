@@ -18,8 +18,8 @@ class CMB2_Expansion {
 
 		// only enqueue these if CMB2 is present
 		if ( wp_style_is( 'cmb2-styles', 'enqueued' ) && wp_script_is( 'cmb2-scripts', 'enqueued' ) && $post_type_show ) {
-			wp_enqueue_style( 'cmb2-exp-nav-styles-admin', CMB2_EXP_URL . 'assets/cmb2-exp-tab-nav.admin.css', false, CMB2_EXP_VERSION, false );
-			wp_enqueue_script( 'cmb2-exp-nav-scripts-admin', CMB2_EXP_URL . 'assets/cmb2-exp-tab-nav.admin.js', array('jquery'), CMB2_EXP_VERSION, true );
+			wp_enqueue_style( 'cmb2-exp-nav-styles-admin', CMB2_EXP_URL . 'assets/cmb2-exp-tab-nav.admin.min.css', false, CMB2_EXP_VERSION, false );
+			wp_enqueue_script( 'cmb2-exp-nav-scripts-admin', CMB2_EXP_URL . 'assets/cmb2-exp-tab-nav.admin.min.js', array('jquery'), CMB2_EXP_VERSION, true );
 		}
 
 	}
@@ -181,7 +181,7 @@ class CMB2_Expansion {
 
 		$fields = $cmb->meta_box['fields'];
 
-		foreach( $fields as $id => $field ) {
+		foreach ( $fields as $id => $field ) {
 
 			// check that 'repeat_limit' is defined, as well as if it's a group
 			if ( isset( $field['repeat_limit'] ) && $field['type'] == 'group' ) {
@@ -377,7 +377,7 @@ class CMB2_Expansion {
 				$output .= '<div class="nav-tab-wrapper">';
 
 					// only show tab if supports Post Editor
-					if( $supports_editor ) {
+					if ( $supports_editor ) {
 						$output .= '<a class="nav-tab" href="#postdivrich">Post Editor</a>';
 					}
 
