@@ -12,9 +12,12 @@ class CMB2_Expansion {
 	 * Enqueue Tabs Assets
 	 */
 	public function enqueue_tabs_assets() {
+		global $post;
+
+		$post_type_show	= isset($post) && $post->post_type == 'attachment' ? false : true;
 
 		// only enqueue these if CMB2 is present
-		if ( wp_style_is( 'cmb2-styles', 'enqueued' ) && wp_script_is( 'cmb2-scripts', 'enqueued' ) ) {
+		if ( wp_style_is( 'cmb2-styles', 'enqueued' ) && wp_script_is( 'cmb2-scripts', 'enqueued' ) && $post_type_show ) {
 			wp_enqueue_style( 'cmb2-exp-nav-styles-admin', CMB2_EXP_URL . 'assets/cmb2-exp-tab-nav.admin.css', false, CMB2_EXP_VERSION, false );
 			wp_enqueue_script( 'cmb2-exp-nav-scripts-admin', CMB2_EXP_URL . 'assets/cmb2-exp-tab-nav.admin.js', array('jquery'), CMB2_EXP_VERSION, true );
 		}
@@ -329,6 +332,10 @@ class CMB2_Expansion {
 	 */
 	public function meta_tabs() {
 		global $post, $wp_meta_boxes;
+
+		if ( $post->post_type == 'attachment' ) {
+			return;
+		}
 
 		$tabs             = '';
 		$screen           = get_current_screen();
